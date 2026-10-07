@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Courses — WebCraft Academy</title>
+  <meta name="description" content="Browse all WebCraft Academy courses: HTML, CSS, JavaScript, responsive design, React and Node.js.">
+  <script>document.documentElement.dataset.theme = localStorage.getItem("webcraft-theme") || "light";</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3E%26lt;%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="courses">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="navbar"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-eyebrow" id="catalogEyebrow"></span>
+        <h1>Every course, one page</h1>
+        <p>Six self-paced courses that take you from a blank file to a deployed full-stack app. Search or filter to find your next lesson.</p>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 84px;">
+      <div class="catalog-toolbar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="searchInput" placeholder="Search courses, topics, lessons…" aria-label="Search courses" autocomplete="off">
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter courses by level"></div>
+      </div>
+
+      <div class="course-grid" id="courseGrid"></div>
+      <div class="empty-state" id="emptyState" hidden></div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/courses.js"></script>
+</body>
+</html>

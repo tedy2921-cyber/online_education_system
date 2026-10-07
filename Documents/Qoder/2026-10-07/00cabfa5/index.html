@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCraft Academy — Learn web development, one lesson at a time</title>
+  <meta name="description" content="Free interactive web development courses: HTML, CSS, JavaScript, responsive design, React and Node.js. Learn by doing with live code playgrounds and quizzes.">
+  <script>document.documentElement.dataset.theme = localStorage.getItem("webcraft-theme") || "light";</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3E%26lt;%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="navbar"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-badge" id="heroBadge"></span>
+            <h1 class="hero-title">Learn to build the web, <span class="gradient-text">one lesson at a time</span></h1>
+            <p class="hero-sub">Master HTML, CSS, JavaScript, React and Node.js through short, interactive lessons — with live code playgrounds you can experiment in and quizzes that check what you actually learned.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" id="startBtn" href="lesson.html?lesson=html-what-is"></a>
+              <a class="btn btn-outline btn-lg" href="courses.html" id="browseBtn"></a>
+            </div>
+            <p class="hero-note" id="heroNote"></p>
+          </div>
+
+          <div class="hero-mock" aria-hidden="true">
+            <div class="mock-bar">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <span class="mock-url">webcraft.academy/lessons/hello</span>
+            </div>
+            <div class="mock-body">
+              <span class="ln"><span class="tok-comment">&lt;!-- My first page --&gt;</span></span>
+              <span class="ln"><span class="tok-pun">&lt;</span><span class="tok-tag">h1</span><span class="tok-pun">&gt;</span>Hello, world!<span class="tok-pun">&lt;/</span><span class="tok-tag">h1</span><span class="tok-pun">&gt;</span></span>
+              <span class="ln"><span class="tok-pun">&lt;</span><span class="tok-tag">button</span> <span class="tok-attr">id</span><span class="tok-pun">=</span><span class="tok-str">"go"</span><span class="tok-pun">&gt;</span>Click me<span class="tok-pun">&lt;/</span><span class="tok-tag">button</span><span class="tok-pun">&gt;</span></span>
+              <span class="ln"> </span>
+              <span class="ln"><span class="tok-pun">&lt;</span><span class="tok-tag">script</span><span class="tok-pun">&gt;</span></span>
+              <span class="ln">  <span class="tok-kw">const</span> <span class="tok-prop">go</span> = <span class="tok-prop">document</span>.<span class="tok-fn">querySelector</span>(<span class="tok-str">"#go"</span>);</span>
+              <span class="ln">  go.<span class="tok-fn">addEventListener</span>(<span class="tok-str">"click"</span>, () =&gt; {</span>
+              <span class="ln">    <span class="tok-prop">document</span>.<span class="tok-prop">body</span>.<span class="tok-prop">classList</span>.<span class="tok-fn">add</span>(<span class="tok-str">"magic"</span>);</span>
+              <span class="ln">  });</span>
+              <span class="ln"><span class="tok-pun">&lt;/</span><span class="tok-tag">script</span><span class="tok-pun">&gt;</span><span class="mock-caret"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats" id="heroStats"></div>
+      </div>
+    </section>
+
+    <!-- Learning paths -->
+    <section class="section alt" id="paths">
+      <div class="container">
+        <div class="section-head left">
+          <span class="section-eyebrow" id="pathsEyebrow"></span>
+          <h2 class="section-title">Follow a guided path</h2>
+          <p class="section-sub">Not sure where to start? Our curated paths sequence the courses so each one builds on the last.</p>
+        </div>
+        <div class="grid-3" id="pathsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Featured courses -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" id="coursesEyebrow"></span>
+          <h2 class="section-title">The core curriculum</h2>
+          <p class="section-sub">Six courses, from your very first tag to deploying a full-stack app.</p>
+        </div>
+        <div class="grid-4" id="featuredGrid"></div>
+        <div style="text-align:center; margin-top: 38px;">
+          <a class="btn btn-outline" href="courses.html" id="viewAllBtn"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" id="howEyebrow"></span>
+          <h2 class="section-title">How the lessons work</h2>
+          <p class="section-sub">Every lesson is short, hands-on, and ends with a quick check.</p>
+        </div>
+        <div class="steps">
+          <div class="step card reveal">
+            <div class="step-num">1</div>
+            <h3>Read a focused concept</h3>
+            <p>Short, friendly explanations with highlighted examples — no 40-minute videos.</p>
+          </div>
+          <div class="step card reveal">
+            <div class="step-num">2</div>
+            <h3>Play with live code</h3>
+            <p>Break things on purpose in the sandboxed playground. Mistakes are the fastest teacher.</p>
+          </div>
+          <div class="step card reveal">
+            <div class="step-num">3</div>
+            <h3>Check your understanding</h3>
+            <p>A three-question quiz with explanations for every answer, right and wrong.</p>
+          </div>
+          <div class="step card reveal">
+            <div class="step-num">4</div>
+            <h3>Track your streak</h3>
+            <p>Progress is saved in your browser and shown on your dashboard as you go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" id="loveEyebrow"></span>
+          <h2 class="section-title">Loved by self-learners</h2>
+          <p class="section-sub">People who went from "view source" confusion to shipping real projects.</p>
+        </div>
+        <div class="grid-3" id="testimonialsGrid"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Ready to write your first line of code?</h2>
+          <p>The first lesson takes about 20 minutes — no account, no setup, nothing to install.</p>
+          <a class="btn btn-light btn-lg" id="ctaStart" href="lesson.html?lesson=html-what-is"></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
